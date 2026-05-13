@@ -24,8 +24,23 @@ SELECT
 FROM generate_series(1, 13);
 
 INSERT INTO order_items (order_id, product_id, quantity)
-SELECT
-    floor(random() * 13 + 1)::INT,
-    floor(random() * 10 + 1)::INT,
-    floor(random() * 7 + 1)::INT
-FROM generate_series(1, 13);
+VALUES (1, 2, 2),
+       (2, 6, 8),
+       (3, 7, 1),
+       (4, 1, 5),
+       (5, 8, 4),
+       (6, 5, 1),
+       (7, 2, 2),
+       (8, 6, 3),
+       (9, 8, 4),
+       (10, 9, 6),
+       (11, 10, 2),
+       (12, 10, 1),
+       (13, 3, 1),
+       (4, 5, 6),
+       (7, 6, 3),
+       (11, 2, 3),
+       (11, 4, 3),
+       (2, 4, 1),
+       (1, 8, 2),
+       (1, 5, 4);

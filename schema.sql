@@ -15,7 +15,6 @@ CREATE TABLE Products (
 CREATE TABLE Orders (
                         id SERIAL PRIMARY KEY,
                         user_id INT NOT NULL REFERENCES Users(id),
-                        order_amount INT NOT NULL CHECK (order_amount > 0),
                         order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
